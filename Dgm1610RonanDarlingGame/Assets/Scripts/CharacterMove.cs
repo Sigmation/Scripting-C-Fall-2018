@@ -33,17 +33,17 @@ public class CharacterMove : MonoBehaviour {
 	void Update(){
 
         //this code makes the character jump
-		if(Input.GetKeyDown (KeyCode.Space)){
+		if(Input.GetKeyDown (KeyCode.Space)&& Grounded){
 			Jump();
 		}
 
 		//this code makes the character move left and right
 		if(Input.GetKeyDown  (KeyCode.D)){
-			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed = 1, GetComponent<Rigidbody2D>(). velocity.y);
+			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>(). velocity.y);
 		
 		}
 		if(Input.GetKeyDown  (KeyCode.A)){
-			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed = -1, GetComponent<Rigidbody2D>(). velocity.y);
+			GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>(). velocity.y);
 		
 		}
     }
