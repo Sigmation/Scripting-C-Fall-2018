@@ -24,8 +24,8 @@ public class CharacterMove : MonoBehaviour {
 	void Start () {
 		print("Hello World!");
 	}
-	
-	void fixedupdate () {
+	//Defines Ground
+	void FixedUpdate () {
 	Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheckRadius, WhatIsGround);
 
 	}
