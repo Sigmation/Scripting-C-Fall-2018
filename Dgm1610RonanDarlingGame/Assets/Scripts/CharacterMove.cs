@@ -13,17 +13,22 @@ public class CharacterMove : MonoBehaviour {
 	//Player Movement Variables
 	public int MoveSpeed;
 	public float JumpHeight;
-	
+	private bool SecondJump;
+
 	//Player grounded varilbles 
 	public Transform GroundCheck;
 	public float GroundCheckRadius;
 	public LayerMask WhatIsGround;
 	public bool Grounded;
 
+	//non-stick player?
+	private float MoveVolocity;
+
 	// Use this for initialization
 	void Start () {
 		print("Hello World!");
 	}
+
 	//Defines Ground
 	void FixedUpdate () {
 	Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheckRadius, WhatIsGround);
@@ -32,21 +37,39 @@ public class CharacterMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update(){
 
-        //this code makes the character jump
+
 		if(Input.GetKeyDown (KeyCode.Space)&& Grounded){
 			Jump();
+			
 		}
+		//double jump code
+		if(Grounded)
+			SecondJump = false;
+		
+		if(Input.GetKeyDown (KeyCode.Space)&& !SecondJump && !Grounded){
+			Jump();
+			SecondJump = true;
+		}
+		//non-stick player?
+		MoveVolocity = 0f;
 
 		//this code makes the character move left and right
 		if(Input.GetKeyDown  (KeyCode.D)){
-			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>(). velocity.y);
-		
+			//GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>(). velocity.y);
+			MoveVolocity = MoveSpeed;
 		}
+
 		if(Input.GetKeyDown  (KeyCode.A)){
-			GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>(). velocity.y);
-		
+			//GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>(). velocity.y);
+			MoveVolocity = -MoveSpeed;
+
 		}
+	
+		GetComponent<Rigidbody2D>().velocity = new Vector2(MoveVolocity, GetComponent<Rigidbody2D>(). velocity.y);
+
+
     }
+
 	public void Jump(){
 		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
 	}
