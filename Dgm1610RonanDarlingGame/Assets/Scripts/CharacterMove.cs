@@ -54,12 +54,12 @@ public class CharacterMove : MonoBehaviour {
 		MoveVolocity = 0f;
 
 		//this code makes the character move left and right
-		if(Input.GetKeyDown  (KeyCode.D)){
+		if(Input.GetKey  (KeyCode.D)){
 			//GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>(). velocity.y);
 			MoveVolocity = MoveSpeed;
 		}
 
-		if(Input.GetKeyDown  (KeyCode.A)){
+		if(Input.GetKey  (KeyCode.A)){
 			//GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>(). velocity.y);
 			MoveVolocity = -MoveSpeed;
 
