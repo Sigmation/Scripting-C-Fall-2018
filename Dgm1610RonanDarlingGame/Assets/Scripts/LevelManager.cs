@@ -25,6 +25,9 @@ public class LevelManager : MonoBehaviour {
 	//Use this for ininsalising
 	void Start () {
 		//Player = FindObjectOfType<Rigidbody2D> ();
+		DeathParticle = GameObject.Find("DeathParticle");
+		RespawnParticle = GameObject.Find("RespawnParticle");
+	
 	}
 	public void RespawnPlayer(){
 		StartCoroutine ("RespawnPlayerCo");
