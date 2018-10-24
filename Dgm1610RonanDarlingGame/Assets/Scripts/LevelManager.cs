@@ -24,18 +24,16 @@ public class LevelManager : MonoBehaviour {
 
 	//Use this for ininsalising
 	void Start () {
-		//Player = FindObjectOfType<Rigidbody2D> ();
-		DeathParticle = GameObject.Find("DeathParticle");
-		RespawnParticle = GameObject.Find("RespawnParticle");
+		Player = FindObjectOfType<Rigidbody2D> ();
 	
-	}
+	} 
 	public void RespawnPlayer(){
 		StartCoroutine ("RespawnPlayerCo");
 	}
 
 	public IEnumerator RespawnPlayerCo(){
 		//Creates death particle
-		Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation);
+		Instantiate(DeathParticle, Player.transform.position, Player.transform.rotation);
 		//hide player
 		//Player.enable = false;
 		Player.GetComponent<Renderer>() .enabled = false;
@@ -51,7 +49,7 @@ public class LevelManager : MonoBehaviour {
 		Player.GetComponent<Rigidbody2D>().gravityScale = StoreGravity;
 		Player.transform.position = CurrentCheckPoint.transform.position;
 		Player.GetComponent<Renderer>() .enabled = true;
-		Instantiate (RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
+		Instantiate(RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
 
 		}
 }
