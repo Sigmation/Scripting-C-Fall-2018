@@ -6,10 +6,10 @@ public class CoinPickup : MonoBehaviour {
 
 	public int PointsToAdd;
 
-	void OnTriggerEnter2D (Collider2D Other){
-		if(Other.GetComponent<Rigidbody2D>() == null)
+	void OnTriggerEnter2D (Collider2D other){
+		if(other.GetComponent<Rigidbody2D>() == null)
+		//if(other.tag == "Pc")
 			return;
-
 		ScoreManager.AddPoints (PointsToAdd);
 
 		Destroy (gameObject);
