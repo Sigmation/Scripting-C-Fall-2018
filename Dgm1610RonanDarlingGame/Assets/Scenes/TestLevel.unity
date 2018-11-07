@@ -1416,6 +1416,7 @@ GameObject:
   - component: {fileID: 1236722866}
   - component: {fileID: 1236722865}
   - component: {fileID: 1236722869}
+  - component: {fileID: 1236722870}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1513,6 +1514,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Eggs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   Jedi: []
+--- !u!114 &1236722870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1236722864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fdbb2ff5a59df54394f649f2f91a880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pets: []
 --- !u!1 &1318569087
 GameObject:
   m_ObjectHideFlags: 0
