@@ -508,6 +508,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &509153090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 509153092}
+  - component: {fileID: 509153091}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &509153091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 509153090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36846dbfa105f7249a848f5c3c6881d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentCheckPoint: {fileID: 676813791}
+  Pc2: {fileID: 1663833449}
+  DeathParticle: {fileID: 1585375574}
+  RespawnParticle: {fileID: 1348082289}
+  RespawnDelay: 2
+  DeathPenalty: 5
+--- !u!4 &509153092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 509153090}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.759826, y: 1.9336318, z: -0.271883}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &537472614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1324,7 @@ GameObject:
   - component: {fileID: 1010726544}
   - component: {fileID: 1010726543}
   - component: {fileID: 1010726542}
+  - component: {fileID: 1010726545}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1330,6 +1377,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1010726545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1010726541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e0a0da2e481094b90a80dc81cc767f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1109814831
 Prefab:
   m_ObjectHideFlags: 0
@@ -1415,8 +1473,6 @@ GameObject:
   - component: {fileID: 1236722867}
   - component: {fileID: 1236722866}
   - component: {fileID: 1236722865}
-  - component: {fileID: 1236722869}
-  - component: {fileID: 1236722870}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1501,31 +1557,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1236722869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1236722864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03238d6c5cebcb64d8a20aeaa7889e88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Eggs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Jedi: []
---- !u!114 &1236722870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1236722864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fdbb2ff5a59df54394f649f2f91a880, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pets: []
 --- !u!1 &1318569087
 GameObject:
   m_ObjectHideFlags: 0
@@ -11061,7 +11092,6 @@ GameObject:
   - component: {fileID: 1663833453}
   - component: {fileID: 1663833452}
   - component: {fileID: 1663833454}
-  - component: {fileID: 1663833455}
   - component: {fileID: 1663833456}
   m_Layer: 0
   m_Name: Pc
@@ -11195,22 +11225,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   Grounded: 0
---- !u!114 &1663833455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1663833449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36846dbfa105f7249a848f5c3c6881d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentCheckPoint: {fileID: 676813791}
-  DeathParticle: {fileID: 1585375574}
-  RespawnParticle: {fileID: 1348082289}
-  RespawnDelay: 0.2
-  DeathPenalty: 5
 --- !u!114 &1663833456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11406,7 +11420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1290fbddcbce04b81a6f4cbeb5fac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 1663833455}
+  LevelManager: {fileID: 0}
 --- !u!1 &1763807245
 GameObject:
   m_ObjectHideFlags: 0
