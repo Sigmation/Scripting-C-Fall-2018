@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 58255484567382198}
   - component: {fileID: 50381837374404586}
   - component: {fileID: 114181005928198066}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,12 +89,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3aea837f63ecc4f9fc5360ad16ebf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 20
   Pc: {fileID: 0}
   EnemyDeath: {fileID: 0}
   PorjectileParticle: {fileID: 0}
   PointsForKill: 10
-  TimeOut: 0
+  TimeOut: 5
 --- !u!212 &212557203473027094
 SpriteRenderer:
   m_ObjectHideFlags: 1
