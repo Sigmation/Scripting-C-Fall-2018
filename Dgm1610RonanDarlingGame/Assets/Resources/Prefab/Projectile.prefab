@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3aea837f63ecc4f9fc5360ad16ebf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 20
+  Speed: 30
   Pc: {fileID: 0}
   EnemyDeath: {fileID: 0}
   PorjectileParticle: {fileID: 0}

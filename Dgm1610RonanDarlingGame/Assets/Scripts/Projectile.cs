@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour {
 	public GameObject PorjectileParticle;
 	public int PointsForKill;
 	public int TimeOut;
+	
 
 	// Use this for initialization
 	void Start () {

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour {
+	
+	public int PointsToRemove;
 	// Shoot varible
 	public Transform FirePoint;
 	public GameObject Projectile;
@@ -15,7 +17,11 @@ public class PlayerShoot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.LeftControl))
-			Instantiate(Projectile,FirePoint.position, FirePoint.rotation);
+		if(AmmoManager.Ammo > 0){
+			if(Input.GetKeyDown(KeyCode.LeftControl)){
+			AmmoManager.AddPoints (PointsToRemove);
+			Instantiate(Projectile,FirePoint.position, FirePoint.rotation);	
+			}
+		}
 	}
 }
