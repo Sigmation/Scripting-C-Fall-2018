@@ -19,7 +19,7 @@ public class PlayerShoot : MonoBehaviour {
 	void Update () {
 		if(AmmoManager.Ammo > 0){
 			if(Input.GetKeyDown(KeyCode.LeftControl)){
-			AmmoManager.AddPoints (PointsToRemove);
+			AmmoManager.RemovePoints (PointsToRemove);
 			Instantiate(Projectile,FirePoint.position, FirePoint.rotation);	
 			}
 		}
