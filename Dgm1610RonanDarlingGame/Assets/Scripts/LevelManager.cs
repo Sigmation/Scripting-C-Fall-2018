@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour {
 	private Rigidbody2D Pc;
 	public int PointsToRemove;
 	public GameObject Pc2;
-
+	public Text OutOflifes;
 	//particles
 	public GameObject DeathParticle;
 	public GameObject RespawnParticle;
@@ -27,6 +27,8 @@ public class LevelManager : MonoBehaviour {
 	//Use this for ininsalising
 	void Start () {
 		Pc = FindObjectOfType<Rigidbody2D> ();
+		OutOflifes = FindObjectOfType<Text> ();
+		OutOflifes.enabled = false;
 	
 	} 
 	public void RespawnPlayer(){
@@ -55,6 +57,10 @@ public class LevelManager : MonoBehaviour {
 		Pc2.SetActive(true);
 		Pc.GetComponent<Renderer>() .enabled = true;
 		Instantiate(RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
+		if (LifeCount.Lifes == 0)
+		OutOflifes.enabled = true;
+	}
+			
 
-		}
+	
 }

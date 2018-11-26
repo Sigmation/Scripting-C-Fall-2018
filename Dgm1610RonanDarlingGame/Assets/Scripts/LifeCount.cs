@@ -8,9 +8,13 @@ public class LifeCount : MonoBehaviour {
 public static int Lifes;
 
 	Text LifesCount;
+	
 
 	// Use this for initialization
 	void Start () {
+
+	
+
 		LifesCount = GetComponent<Text>();
 
 		Lifes = 3; 
@@ -20,6 +24,7 @@ public static int Lifes;
 	void Update () {
 		if (Lifes < 0)
 		    Lifes = 0;
+			
 		LifesCount.text = " " + Lifes;
 	} 
 
@@ -32,5 +37,7 @@ public static int Lifes;
 		Lifes += PointsToAdd;
 
 	}
+
+	
 }
 
