@@ -20,7 +20,7 @@ public static int Ammo;
 	// Update is called once per frame
 	void Update () {
 		if (Ammo > 20)
-			Ammo = 20;
+		    Ammo = 20;
 		if (Ammo < 0)
 		    Ammo = 0;
 		AmmoCount.text = " " + Ammo;

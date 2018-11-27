@@ -9,19 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1814433649166012}
+  m_RootGameObject: {fileID: 1852043950416596}
   m_IsPrefabAsset: 1
---- !u!1 &1814433649166012
+--- !u!1 &1852043950416596
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4469350672287576}
-  - component: {fileID: 212361359707332326}
-  - component: {fileID: 114860816094303622}
-  - component: {fileID: 61299533033188606}
+  - component: {fileID: 4245459250429818}
+  - component: {fileID: 212176875953957628}
+  - component: {fileID: 61984149485003980}
+  - component: {fileID: 114420469535453964}
   m_Layer: 10
   m_Name: Ammo
   m_TagString: Untagged
@@ -29,30 +29,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4469350672287576
+--- !u!4 &4245459250429818
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1814433649166012}
+  m_GameObject: {fileID: 1852043950416596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.6, y: -4.53, z: -1.2359854}
+  m_LocalPosition: {x: -9.6, y: -4.89, z: -1.2359854}
   m_LocalScale: {x: 8, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61299533033188606
+--- !u!61 &61984149485003980
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1814433649166012}
+  m_GameObject: {fileID: 1852043950416596}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -67,24 +67,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &114860816094303622
+--- !u!114 &114420469535453964
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1814433649166012}
+  m_GameObject: {fileID: 1852043950416596}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a5e21be4bf0845ad3b924e64a59f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PointsToAdd: 20
---- !u!212 &212361359707332326
+--- !u!212 &212176875953957628
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1814433649166012}
+  m_GameObject: {fileID: 1852043950416596}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

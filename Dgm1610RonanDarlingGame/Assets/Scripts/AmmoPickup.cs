@@ -5,9 +5,10 @@ using UnityEngine;
 public class AmmoPickup : MonoBehaviour {
 
 	public int PointsToAdd;
+	
 
 	void OnTriggerEnter2D (Collider2D other){
-		if(other.GetComponent<Rigidbody2D>() == null)
+			if(other.GetComponent<Rigidbody2D>() == null)
 			return;
 		AmmoManager.AddPoints (PointsToAdd);
 
