@@ -79,4 +79,6 @@ public class CharacterMove : MonoBehaviour {
 	public void Jump(){
 		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
 	}
+
+		
 }

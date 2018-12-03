@@ -17,11 +17,10 @@ public class PlayerShoot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(AmmoManager.Ammo > 0){
-			if(Input.GetKeyDown(KeyCode.LeftControl)){
+		if(Input.GetKeyDown(KeyCode.LeftControl)&& AmmoManager.Ammo > 0){
 			AmmoManager.RemovePoints (PointsToRemove);
 			Instantiate(Projectile,FirePoint.position, FirePoint.rotation);	
-			}
+			
 		}
 	}
 }
