@@ -24,6 +24,8 @@ public class CharacterMove : MonoBehaviour {
 	//non-stick player?
 	private float MoveVolocity;
 
+	public Animator animator;
+
 	// Use this for initialization
 	void Start () {
 		print("Hello World!");
@@ -62,17 +64,16 @@ public class CharacterMove : MonoBehaviour {
 		if(Input.GetKey  (KeyCode.A)){
 			//GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>(). velocity.y);
 			MoveVolocity = -MoveSpeed;
-
 		}
 	
 		GetComponent<Rigidbody2D>().velocity = new Vector2(MoveVolocity, GetComponent<Rigidbody2D>(). velocity.y);
 
 		//player flip
 		if (GetComponent<Rigidbody2D>().velocity.x > 0)
-			transform.localScale = new Vector3(5f,5f,1);
+			transform.localScale = new Vector3(0.3f,0.3f,1);
 
 		else if (GetComponent<Rigidbody2D>().velocity.x < 0)
-			transform.localScale = new Vector3(-5f,5f,1);
+			transform.localScale = new Vector3(-0.3f,0.3f,1);
 			
 		}
 
