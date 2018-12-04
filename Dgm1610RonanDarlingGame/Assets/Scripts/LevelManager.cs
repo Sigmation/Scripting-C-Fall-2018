@@ -38,25 +38,25 @@ public class LevelManager : MonoBehaviour {
 
 	public IEnumerator RespawnPlayerCo(){
 		//Creates death particle
-		Instantiate(DeathParticle, Pc.transform.position, Pc.transform.rotation);
+		Instantiate(DeathParticle, Pc2.transform.position, Pc2.transform.rotation);
 		//hide player
 		//Player.enable = false;
 		Pc2.SetActive(false);
-		Pc.GetComponent<Renderer>() .enabled = false;
+		//Pc.GetComponent<Renderer>() .enabled = false;
 		LifeCount.RemovePoints (PointsToRemove);
 		// Gravity reset
 		StoreGravity = Pc.GetComponent<Rigidbody2D>().gravityScale;
-		Pc.GetComponent<Rigidbody2D>().gravityScale =0f;
-		Pc.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		Pc2.GetComponent<Rigidbody2D>().gravityScale =0f;
+		Pc2.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		//point penalty
 		ScoreManager.AddPoints(-DeathPenalty);
 		//Debug Penailty
 		Debug.Log("Player Respawn");
 		yield return new WaitForSeconds (RespawnDelay);
-		Pc.GetComponent<Rigidbody2D>().gravityScale = StoreGravity;
-		Pc.transform.position = CurrentCheckPoint.transform.position;
+		Pc2.GetComponent<Rigidbody2D>().gravityScale = StoreGravity;
+		Pc2.transform.position = CurrentCheckPoint.transform.position;
 		Pc2.SetActive(true);
-		Pc.GetComponent<Renderer>() .enabled = true;
+		//Pc.GetComponent<Renderer>() .enabled = true;
 		Instantiate(RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
 	}
 			

@@ -1,12 +1,10 @@
-﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.UI;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
+public class TumbleWeed : MonoBehaviour {
 
-public class EnemyPatroll : MonoBehaviour {
-	//movement
-	public float MoveSpeed;
+public float MoveSpeed;
 	public bool MoveRight;
 	//walk cycle
 	public Transform WallCheck;
@@ -30,11 +28,11 @@ public class EnemyPatroll : MonoBehaviour {
 		}
 
 		if (MoveRight){
-			transform.localScale = new Vector3(-0.4f,0.33f,1f);
+			transform.localScale = new Vector3(-0.27f,0.31f,1f);
 			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 		}
 		else {
-			transform.localScale = new Vector3(0.4f,0.33f,1f);
+			transform.localScale = new Vector3(0.27f,0.31f,1f);
 			GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 		}
 	}

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 /* this give you more lines
 1
 2
@@ -29,6 +30,7 @@ public class CharacterMove : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		print("Hello World!");
+		
 	}
 
 	//Defines Ground
@@ -59,6 +61,7 @@ public class CharacterMove : MonoBehaviour {
 		if(Input.GetKey  (KeyCode.D)){
 			//GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>(). velocity.y);
 			MoveVolocity = MoveSpeed;
+			
 		}
 
 		if(Input.GetKey  (KeyCode.A)){
