@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LassoCleanUp : MonoBehaviour {
 	public float TimeOut;
-	public GameObject EnemyDeath;
+	public EnemyPatroll EnemyPatroll;
+
 	// Use this for initialization
 	void Start () {
-		EnemyDeath = Resources.Load("Prefab/DeathParticle") as GameObject;
-		
+		EnemyPatroll = FindObjectOfType <EnemyPatroll>();
 		Destroy (gameObject,TimeOut);
 	}
 	
@@ -18,8 +19,11 @@ public class LassoCleanUp : MonoBehaviour {
 	}
 		void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Enemy"){
-			Instantiate(EnemyDeath, other.transform.position, other.transform.rotation);
-			Destroy (other.gameObject);
+			EnemyPatroll.TiedUp();
+			return;	
+		}
+		if(other.tag == "Bar"){
+			Barrle.Damage = Barrle.Damage + 1;
 		}
 }
 }

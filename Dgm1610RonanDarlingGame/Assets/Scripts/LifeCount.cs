@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class LifeCount : MonoBehaviour {
 
@@ -26,6 +27,9 @@ public static int Lifes;
 		    Lifes = 0;
 			
 		LifesCount.text = " " + Lifes;
+		if (Lifes == 0){
+			SceneManager.LoadScene(4);
+		}
 	} 
 
 	public static void RemovePoints (int PointsToRemove) {

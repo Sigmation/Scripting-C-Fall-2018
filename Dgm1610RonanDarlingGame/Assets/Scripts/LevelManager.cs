@@ -7,7 +7,7 @@ using System.Collections.Generic;
 public class LevelManager : MonoBehaviour {
 	
 	public GameObject CurrentCheckPoint;
-	private Rigidbody2D Pc;
+//	private Rigidbody2D Pc;
 	public int PointsToRemove;
 	public GameObject Pc2;
 	//particles
@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour {
 
 	//Use this for ininsalising
 	void Start () {
-		Pc = FindObjectOfType<Rigidbody2D> ();
+//		Pc = FindObjectOfType<Rigidbody2D> ();
 	
 	} 
 
@@ -45,7 +45,7 @@ public class LevelManager : MonoBehaviour {
 		//Pc.GetComponent<Renderer>() .enabled = false;
 		LifeCount.RemovePoints (PointsToRemove);
 		// Gravity reset
-		StoreGravity = Pc.GetComponent<Rigidbody2D>().gravityScale;
+		StoreGravity = Pc2.GetComponent<Rigidbody2D>().gravityScale;
 		Pc2.GetComponent<Rigidbody2D>().gravityScale =0f;
 		Pc2.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		//point penalty

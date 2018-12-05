@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Pc
+  - Bar
   layers:
   - Default
   - TransparentFX

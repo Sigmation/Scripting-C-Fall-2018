@@ -5,7 +5,6 @@ using UnityEngine;
 public class KillPlayer : MonoBehaviour {
 
 	public LevelManager LevelManager;
-
 	// Use this for initialization
 	void Start () {
 		LevelManager = FindObjectOfType <LevelManager>();
@@ -16,5 +15,5 @@ public class KillPlayer : MonoBehaviour {
 		if(other.name == "Pc"){
 			LevelManager.RespawnPlayer();
 		}
+		}
 	}
-}
