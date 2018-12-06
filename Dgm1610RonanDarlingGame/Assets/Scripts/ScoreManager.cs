@@ -20,8 +20,6 @@ public class ScoreManager : MonoBehaviour {
 	void Start () {
 		ScoreText = GetComponent<Text>();
 
-		Score = 0;
-
 	//	WinText.GetComponent<Text>().enabled = false;
 	}
 	

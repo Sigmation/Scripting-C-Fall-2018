@@ -12,11 +12,11 @@ public class Barrle : MonoBehaviour {
 	public GameObject BrakeParticle;
 	public Transform DropPoint;
 
+	public int Crack;
+	public int Crack2;
+	public int Broke;
+	public int Reset;
 	//makes it work with multiple barrles
-	public int Damaged;
-	public int Broke1;
-	public int Broke2;
-	public int reset;
 
 	// Use this for initialization
 	void Start () {
@@ -27,19 +27,22 @@ public class Barrle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Damage == Damaged){
+		if(Damage == Crack){
 			Barrle1.GetComponent<Renderer>() .enabled = false;
 			Barrle2.GetComponent<Renderer>() .enabled = true;
 		}
-		if(Damage == Broke1){
+		if(Damage == Crack2){
 		Instantiate(BrakeParticle, Barrle1.transform.position, Barrle1.transform.rotation);
 		Damage = Damage + 1;
 		}
-		if(Damage == Broke2){
+		if(Damage == Broke){
 			Instantiate(Inside,DropPoint.position, DropPoint.rotation);
-			Damage = reset;
+			Damage = Reset;
 			Destroy (gameObject);
 
 		}
 	}
+	
+	
+
 }

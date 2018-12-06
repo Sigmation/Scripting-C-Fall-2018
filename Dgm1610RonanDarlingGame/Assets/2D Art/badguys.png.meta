@@ -222,26 +222,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: worm 1
-      rect:
-        serializedVersion: 2
-        x: 207
-        y: 1719
-        width: 553
-        height: 210
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58081eb97fd7c484496f038e5e5e4371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: worm 2
       rect:
         serializedVersion: 2

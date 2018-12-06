@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LifeCount : MonoBehaviour {
 
-public static int Lifes;
+public static int Lifes = 3;
 
 	Text LifesCount;
 	
@@ -18,7 +18,7 @@ public static int Lifes;
 
 		LifesCount = GetComponent<Text>();
 
-		Lifes = 3; 
+		 
 		}
 	
 	// Update is called once per frame

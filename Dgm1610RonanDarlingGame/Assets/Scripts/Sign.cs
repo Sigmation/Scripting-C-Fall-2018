@@ -5,15 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Sign : MonoBehaviour {
 
-	public int WichLevel;
+	public static int WichLevel;
 
-	void Start(){
-		WichLevel = 1;
-	}
 
 	void OnTriggerEnter2D (Collider2D other){
-		if (WichLevel == 1)
+		if (WichLevel == 0)
 		SceneManager.LoadScene(3);
+
+		if (WichLevel == 1)
+		SceneManager.LoadScene(5);
 		}
 		
 }

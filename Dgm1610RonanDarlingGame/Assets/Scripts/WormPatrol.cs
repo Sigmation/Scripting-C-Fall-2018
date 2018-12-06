@@ -1,10 +1,8 @@
-﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.UI;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
-
-public class EnemyPatroll : MonoBehaviour {
+public class WormPatrol : MonoBehaviour {
 	//movement
 	public float MoveSpeed;
 	public bool MoveRight;
@@ -17,10 +15,10 @@ public class EnemyPatroll : MonoBehaviour {
 	private bool NotAtEdge;
 	public Transform EdgeCheck;
 	public Transform Defeat;
-	public GameObject TiedSnake;
+	public GameObject TiedWorm;
 	
 	void Start () {
-		TiedSnake = Resources.Load("Prefab/SnakeTied") as GameObject;
+		TiedWorm = Resources.Load("Prefab/WormTied") as GameObject;
 	}
 	
 	// Update is called once per frame
@@ -42,9 +40,9 @@ public class EnemyPatroll : MonoBehaviour {
 			GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 		}
 		}
-		void OnTriggerEnter2D(Collider2D other){
+	void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Lasso"){	
-			Instantiate(TiedSnake,Defeat.position, Defeat.rotation);
+			Instantiate(TiedWorm,Defeat.position, Defeat.rotation);
 			Destroy (gameObject);
 			return;
 		}
