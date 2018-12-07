@@ -5273,6 +5273,7 @@ MonoBehaviour:
     m_Bits: 256
   Grounded: 0
   animator: {fileID: 1556448700}
+  JumpDeley: 0.8
 --- !u!50 &1556448703
 Rigidbody2D:
   serializedVersion: 4

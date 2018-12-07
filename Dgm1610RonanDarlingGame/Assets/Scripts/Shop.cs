@@ -9,7 +9,7 @@ public class Shop : MonoBehaviour {
 	GameObject Select;
 	public int Buy;
 	public GameObject Cheat;
-	public int Cheater;
+	public static int Cheater;
 	
 	// Use this for initialization
 	void Start () {
@@ -39,6 +39,7 @@ public class Shop : MonoBehaviour {
 		if(Input.GetKeyDown  (KeyCode.Return)&& ScoreManager.Score == 100){
 			ShopText.text = "YouWin";
 			ScoreManager.Score = ScoreManager.Score - 100;
+			SceneManager.LoadScene(7);
 		}
 		else if(Input.GetKeyDown  (KeyCode.Return)&& ScoreManager.Score < 100){
 			ShopText.text = "You Want To Win The Game Alredy? To Bad You Lack The Funds. But I Here By Beating The Boss On The 3rd Level You Get 100 Gold";
@@ -52,9 +53,10 @@ public class Shop : MonoBehaviour {
 		}
 		else if (Buy == 3){
 		transform.localPosition = new Vector3(5.5f,2.46f,1f);
-			if(Input.GetKeyDown  (KeyCode.Return)&& ScoreManager.Score == 50 && Cheater == 0){
+			if(Input.GetKeyDown  (KeyCode.Return)&& ScoreManager.Score > 49 && Cheater == 0){
 			ShopText.text = "Congrats The First Phase Of The Boss Has Been Skiped";
 			ScoreManager.Score = ScoreManager.Score - 50;
+			BossScript.SkeCheat = 1;
 			Cheater = 1;
 			}
 			else if(Input.GetKeyDown  (KeyCode.Return)&& ScoreManager.Score < 50 && Cheater == 0){

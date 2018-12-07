@@ -28,6 +28,7 @@ public class CharacterMove : MonoBehaviour {
 
 	public Animator animator;
 
+	public float JumpDeley;
 	// Use this for initialization
 	void Start () {
 		print("Hello World!");
@@ -61,7 +62,6 @@ public class CharacterMove : MonoBehaviour {
 		//double jump code
 		if(Grounded)
 			SecondJump = false;
-			animator.SetBool("IsJumping", false);
 		
 		if(Input.GetKeyDown (KeyCode.Space)&& !SecondJump && !Grounded){
 			Jump();
@@ -101,8 +101,12 @@ public class CharacterMove : MonoBehaviour {
 
 	public void Jump(){
 		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
-		animator.SetBool("IsJumping", true);
+		StartCoroutine ("JumpCo");
 	}
-
+	public IEnumerator JumpCo(){
+		animator.SetBool("IsJumping", true);
+		yield return new WaitForSeconds (JumpDeley);
+		animator.SetBool("IsJumping", false);
+	}
 		
 }

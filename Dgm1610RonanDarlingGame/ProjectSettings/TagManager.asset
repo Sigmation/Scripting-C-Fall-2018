@@ -8,6 +8,8 @@ TagManager:
   - Pc
   - Bar
   - Lasso
+  - Worm
+  - BigWorm
   layers:
   - Default
   - TransparentFX
